@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_163013) do
+ActiveRecord::Schema.define(version: 2020_10_12_163339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2020_10_12_163013) do
   create_table "blogs_categories", id: false, force: :cascade do |t|
     t.bigint "blog_id", null: false
     t.bigint "category_id", null: false
-    t.index ["blog_id"], name: "index_blogs_categories_on_blog_id"
-    t.index ["category_id"], name: "index_blogs_categories_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
